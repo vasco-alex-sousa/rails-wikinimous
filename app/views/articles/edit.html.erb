@@ -1,0 +1,13 @@
+<h1>Edit Article</h1>
+
+<%= form_with(model: @article, url: update_article_path(@article), method: :patch) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Go Back", articles_path %>
